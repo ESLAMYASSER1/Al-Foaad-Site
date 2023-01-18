@@ -173,6 +173,9 @@ header img{
         width: 70px;
         margin: 0;
     }
+    header ul{
+        width: 75%;
+    }
 } 
 @media screen and (max-width:400px){
     header{
