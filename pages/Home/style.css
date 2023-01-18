@@ -14,8 +14,22 @@ html{
     background-color: var(--main-background);
 }
 body{
-    width: 60%;
-    margin: 0 20% 0 20%;
+    display: grid;
+    grid-template-columns: 19% 60% 19%;
+    grid-template-areas: "adverleft main adverright";
+    column-gap: 10px;
+}
+
+/* style for ads left  */
+.adleft{
+    grid-area: adverleft;
+}
+/* style for body and content */
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    
 }
 header{
     background-color:var(--mid-orange) ;
@@ -44,7 +58,8 @@ header ul li a:after{
     background: rgb(6, 6, 6);
     left: 0;
     top: 30%;
-    position: relative;border-radius: 50%;
+    position: relative;
+    border-radius: 50%;
 }
 header ul li a:hover::after{
     animation-name: linewidth;
@@ -84,33 +99,91 @@ header img{
     margin-right: 10px;
 }
 
+
+/* style for ads on right */
+.adver-right{
+    grid-area: adverright;
+}
+
+/* media queries */
 @media screen and (max-width:1600px){
-    body{
-        width: 70%;
-            margin: 0 15% 0 15%;
+    header{
+        width: 95%;
+        align-self: center;
     }
 }
 @media screen and (max-width:1200px){
-    body{
-        width: 80%;
-            margin: 0 10% 0 10%;
+    header{
+        width: 95%;
     }
 }
-@media screen and (max-width:720px){
+@media screen and (max-width:1000px){
     body{
-        width: 98%;
-            margin: 0 1% 0 1%;
+        grid-template-columns: 19% 78% 0%;
+    }
+    .adver-right{
+        display: none;
+    }
+    header{
+        width: 95%;
     }
     header ul li a{
         font-size: 1.3rem;
     }
 }
-@media screen and (max-width:470px){
+@media screen and (max-width:800px){
     body{
-        width: 98%;
-            margin: 0 1% 0 1%;
+        grid-template-columns: 19% 78% 0%;
+    }
+    .adver-right{
+        display: none;
+    }
+    header{
+        width: 95%;
+    }
+    header ul li a{
+        font-size: 1.2rem;
+    }
+} 
+@media screen and (max-width:700px){
+    body{
+        grid-template-columns: 19% 78% 0%;
+    }
+    .adver-right{
+        display: none;
+    }
+    header{
+        width: 95%;
+    }
+    header ul li a{
+        font-size: 1.1rem;
+    }
+} 
+@media screen and (max-width:600px){
+    body{
+        display: block;
+    }
+    header{
+        width: 90%;
+    }
+    header ul li a{
+        font-size: 1.1rem;
+    }
+} 
+@media screen and (max-width:400px){
+    header{
+        width: 90%;
     }
     header ul li a{
         font-size: 1rem;
     }
-}
+} 
+@media screen and (max-width:350px){
+    header ul li a{
+        font-size: .8rem;
+    }
+    header img{
+        max-width: 50px;
+        margin: 0;
+    }
+} 
