@@ -176,6 +176,9 @@ header img{
         max-width: 50px;
         margin: 0;
     }
+    header ul{
+        width: 75%;
+    }
 } 
 @media screen and (max-width:350px){
     header ul li a{
@@ -185,4 +188,5 @@ header img{
         max-width: 50px;
         margin: 0;
     }
+    
 } 
