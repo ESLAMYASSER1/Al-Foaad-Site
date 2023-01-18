@@ -169,6 +169,10 @@ header img{
     header ul li a{
         font-size: 1.1rem;
     }
+    header img{
+        max-width: 50px;
+        margin: 0;
+    }
 } 
 @media screen and (max-width:400px){
     header{
@@ -178,7 +182,7 @@ header img{
         font-size: 1rem;
     }
     header img{
-        max-width: 60px;
+        max-width: 50px;
         margin: 0;
     }
 } 
