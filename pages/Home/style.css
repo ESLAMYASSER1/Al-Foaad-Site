@@ -116,6 +116,7 @@ header img{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 .imgpanner a{
     height: 100%;
@@ -138,12 +139,12 @@ header img{
     transform: scale(1.3);
 }
 .imgpannerbtn-left{
-    position: relative;
-    right: 30%;
+    position: absolute;
+    left: 25%;
 }
 .imgpannerbtn-right{
-    position: relative;
-    left: 30%;
+    position: absolute;
+    right: 25%;
 }
 .imgpanner img:hover{
     transform: scale(1.2);
@@ -178,6 +179,9 @@ header img{
     header ul li a{
         font-size: 1.3rem;
     }
+    .imgpannerbtn-right{
+        right: 10%;
+    }
 }
 @media screen and (max-width:800px){
     body{
@@ -191,6 +195,9 @@ header img{
     }
     header ul li a{
         font-size: 1.2rem;
+    }
+    .imgpannerbtn-left{
+        left: 10%;
     }
 } 
 
@@ -212,6 +219,12 @@ header img{
     header ul{
         width: 70%;
     }
+    .imgpannerbtn-left{
+        left: 5%;
+    }
+    .imgpannerbtn-right{
+        right: 5%;
+    }
 } 
 @media screen and (max-width:400px){
     header{
@@ -226,6 +239,12 @@ header img{
     }
     header ul{
         width: 75%;
+    }
+    .imgpannerbtn-left{
+        left: 0%;
+    }
+    .imgpannerbtn-right{
+        right: 0%;
     }
 } 
 @media screen and (max-width:350px){
